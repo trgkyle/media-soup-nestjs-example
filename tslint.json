@@ -21,6 +21,7 @@
     ]
   },
   "rules": {
+    "ordered-imports": [false],
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,
@@ -132,7 +133,6 @@
     ],
     "align": true,
     "prefer-readonly": true,
-    "ordered-imports": true,
     "no-consecutive-blank-lines": true,
     "trailing-comma": [
       true,
