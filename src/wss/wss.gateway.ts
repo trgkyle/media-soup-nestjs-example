@@ -9,8 +9,8 @@ import {
 import config from 'config';
 import io from 'socket.io';
 
-import * as mediasoup from 'mediasoup';
-import { WorkerSettings } from 'mediasoup/node/lib/Worker';
+// import * as mediasoup from 'mediasoup';
+// import { WorkerSettings } from 'mediasoup/node/lib/Worker';
 import { Worker } from 'mediasoup/node/lib/types';
 import { LoggerService } from '../logger/logger.service';
 
@@ -57,7 +57,7 @@ export class WssGateway implements OnGatewayConnection, OnGatewayDisconnect {
   private async createWorkers(): Promise<void> {
     const promises = [];
     for (let i = 0; i < mediasoupSettings.workerPool; i++) {
-      promises.push(mediasoup.createWorker(mediasoupSettings.worker as WorkerSettings));
+      // promises.push(mediasoup.createWorker(mediasoupSettings.worker as WorkerSettings));
     }
 
     this.workers = (await Promise.all(promises)).reduce((acc, worker, index) => {
